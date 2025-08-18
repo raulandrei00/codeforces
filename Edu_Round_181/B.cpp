@@ -5,13 +5,15 @@
 #include<functional>
 #include<map>
 #include<set>
-#include<algorithm>
+#include<bits\stdc++.h>
 
 using namespace std;
 using ll = long long;
 
 void solve () {
-
+    ll x, y, k; cin >> x >> y >> k;
+    if (max(x,y) / __gcd(x, y) > k) cout << 2 << '\n';
+    else cout << 1 << '\n';
 }
 
 int main () {

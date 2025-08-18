@@ -5,13 +5,18 @@
 #include<functional>
 #include<map>
 #include<set>
-#include<algorithm>
 
 using namespace std;
 using ll = long long;
 
-void solve () {
+ll calc (ll r) {
+    return r - 1 - r / 5 - r / 2 - r/3 - r/7 + r/6+r/21+r/14+r/10+r/15+r/35-r/30-r/70-r/105-r/42+r/210;
+}
 
+void solve () {
+    ll l, r; cin >> l >> r;
+    ll ans = calc(r) - calc(l - 1);
+    cout << ans << '\n';
 }
 
 int main () {
