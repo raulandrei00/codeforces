@@ -6,12 +6,29 @@
 #include<map>
 #include<set>
 #include<algorithm>
+#include<deque>
 
 using namespace std;
 using ll = long long;
 
 void solve () {
-
+    deque <char> dq;
+    int n, m;
+    cin >> n;
+    string a , b , c; cin >> a;
+    for (auto ch : a) dq.push_back(ch);
+    cin >> m >> b >> c;
+    for (int i = 0; i < m; i++) {
+        if (c[i] == 'D') {
+            dq.push_back(b[i]);
+        }
+        else {
+            dq.push_front(b[i]);
+        }
+    }
+    for (auto ch : dq) cout << ch;
+    cout << '\n';
+    return ;
 }
 
 int main () {
@@ -27,6 +44,4 @@ int main () {
     while (t--) {
         solve();
     }
-
-    return 0;
 }
