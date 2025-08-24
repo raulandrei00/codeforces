@@ -11,7 +11,17 @@ using namespace std;
 using ll = long long;
 
 void solve () {
-
+    int n; cin >> n;
+    vector<int> a(n+1);
+    vector<int> f(101 , 0);
+    int ans = 0;
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+        f[a[i]]++;
+        if (f[a[i]] == 2) ans = 1;
+    }
+    if (ans) cout << "YES\n";
+    else cout << "NO\n";
 }
 
 int main () {
